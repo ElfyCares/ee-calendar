@@ -1,0 +1,90 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+
+<link rel="import" href="../paper-date-picker/paper-date-picker.html">
+
+<link rel="import" href="../image-mask/image-mask.html">
+<link rel="import" href="avatars.html">
+<!--
+An element providing a solution to no problem in particular.
+
+Example:
+
+    <ee-calendar></ee-calendar>
+
+@demo demo/index.html
+@hero hero.svg
+-->
+
+<dom-module id="ee-calendar">
+  <template>
+    <style>
+      :host {
+        display: block;
+        box-sizing: border-box;
+        max-width: 512px;
+      }
+
+      #calendar {
+        padding: 12px;
+      }
+
+      .container {
+        width: 100%;
+      }
+
+      .event-container {
+        padding: 12px;
+      }
+
+      .row {
+        @apply(--layout-horizontal);
+      }
+
+      .event-container {
+        border-top: 1px solid gray;
+      }
+
+      .time-container {
+        @apply(--layout-vertical);
+      }
+
+      .desc-container {
+        @apply(--layout-vertical);
+      }
+
+    </style>
+    <div class="container">
+      <paper-date-picker id="calendar" date="{{date}}"></paper-date-picker>
+      <div class="event-container">
+        <div>[[date]]</div>
+
+        <div class="row">
+          <image-mask src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/Harry-Potter-1-.jpg" size="50"></image-mask>
+          <div class="time-container">
+            <span>11 AM</span>
+            <span>10 PM</span>
+          </div>
+          <div class="desc-container">
+            <span>Christopher Obrien</span>
+            <span>1 new message</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+  </template>
+
+  <script>
+    Polymer({
+      is: 'ee-calendar',
+
+      properties: {
+          
+      },
+
+    });
+  </script>
+</dom-module>
