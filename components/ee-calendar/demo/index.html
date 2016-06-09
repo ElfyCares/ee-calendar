@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>ee-calendar Demo</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="../ee-calendar.html">
+  </head>
+  <body unresolved>
+    <p>An example of <code>&lt;ee-calendar&gt;</code>:</p>
+    <p>Every friday there is 1 event, on 2016/6/12, there are 2.</p>
+    <ee-calendar></ee-calendar>
+
+    <script>
+      var seedElement = document.querySelector('ee-calendar');
+
+      window.addEventListener('WebComponentsReady', function() {
+        // imports are loaded and elements have been registered
+        seedElement.events = [
+          {date: '2016/6/10', recurring: true, exclude: ['2016/6/17'], name: 'Christopher Obrien', time_from: '11 AM', time_to: '10 PM', notification: '1 new message'},
+          {date: '2016/6/12', recurring: false, name: 'Christopher Obrien', time_from: '11 AM', time_to: '10 PM', notification: '1 new message'},
+          {date: '2016/6/12', recurring: false, name: 'Jim Curry Yellow', time_from: '10 AM', time_to: '1 PM', notification: '8 new messages'}
+        ];
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "name": "import-momentjs",
+  "authors": [
+    "Jalal Fathi <jfathi.mail@gmail.com> (http://jalal.io)"
+  ],
+  "description": "The import element of the momentjs library.",
+  "keywords": [
+    "web-component",
+    "web-components",
+    "polymer",
+    "momentjs",
+    "moment",
+    "import"
+  ],
+  "main": "import-momentjs.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/JaySunSyn/import-momentjs.git",
+  "ignore": [
+    "/.*",
+    "/test/",
+    "/demo/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "momentjs": "~2.10.6"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "247f645234",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "247f645234a4a92288d979e514061ef154fb579a"
+  },
+  "_source": "https://github.com/JaySunSyn/import-momentjs.git",
+  "_target": "*",
+  "_originalSource": "import-momentjs"
+}
